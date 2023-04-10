@@ -9,9 +9,19 @@ public class User implements Serializable {
     private String userPassword;
     private String userPosition;
 
+    public User() {
+    }
+
     public User(String userPhone, String userPassword) {
         this.userPhone = userPhone;
         this.userPassword = userPassword;
+    }
+
+    public User(String userName, String userPhone, String userPassword, String userPosition) {
+        this.userName = userName;
+        this.userPhone = userPhone;
+        this.userPassword = userPassword;
+        this.userPosition = userPosition;
     }
 
     public Integer getUserId() { return userId;}
