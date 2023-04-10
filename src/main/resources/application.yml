@@ -1,0 +1,27 @@
+server:
+ port:
+   9090
+
+spring:
+ datasource:
+     driver-class-name:
+      org.postgresql.Driver
+     url:
+      jdbc:postgresql://localhost:5432/map?serverTimezone=GMT%2b8
+     username:
+      postgres
+     password:
+      646598
+
+#在application.yml中声明实体类与*mapper.xml的位置
+mybatis:
+  type-aliases-package: com.dyx.mobilegis.entity
+  mapper-locations: classpath*:com/dyx/mobilegis/*/mapper/xml/*.xml
+#  mapper-locations: classpath:mapper/*.xml
+#  mapper-locations: classpath*:src/main/resources/mapper/*.xml
+
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+
